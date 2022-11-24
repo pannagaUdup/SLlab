@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Exchange</title>
+</head>
+Enter String:<input type="text" id="str">
+<input type="button" onclick="convert()" value="submit">
+Output:<span id='stringresult'>
+<body>
+    <script>
+        function convert()
+        {
+            a=document.getElementById("str").value;
+            str=a.split('');
+            for(i=0;i<str.length;i++)
+            {
+                switch(str[i])
+                {
+                    case ' ':break;
+                    case 'z':str[i]='a';break;
+                    case 'Z':str[i]='A';break;
+                    default:
+                        str[i]=String.fromCharCode(str[i].charCodeAt()+1);
+                }
+                switch(str[i])
+                {
+                    case 'a':
+                    case 'e':
+                    case 'i':
+                    case 'o':
+                    case 'u':str[i]=str[i].toUpperCase();
+                    break;
+                }
+            }
+            str=str.join('')
+            document.getElementById("stringresult").innerHTML=str;
+        }
+    </script>
+</body>
+</html>

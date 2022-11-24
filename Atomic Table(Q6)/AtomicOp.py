@@ -1,0 +1,2 @@
+from AtomicFunc import *
+atomicop()

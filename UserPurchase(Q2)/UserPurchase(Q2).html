@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items</title>
+</head>
+Item name:<input type="text" id="name" name="itemname"><br></br>
+Item price:<input type="text" id="price"><br></br>
+No of items bought:<input type="text" id="itmno"><br></br>
+<input type="button" onclick="func1()" value="submit"><br></br>
+totalprice:<span id="totalsum"></span>
+<body>
+    <script>
+            function func1()
+            {
+                a=document.getElementById("price").value;
+                b=document.getElementById("itmno").value;
+                c=a*b;
+                document.getElementById("totalsum").innerHTML=c;
+            }
+    </script>
+</body>
+</html>

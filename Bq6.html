@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String manipulation</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="str1"><br>
+        <input type="text" id="str2"><br>
+        <input type="button" onclick="func()" value="submit">
+        <span id="res1"></span><br>
+        <span id="res2"></span>
+    </form>
+    <script>
+        function func()
+        {
+            var ws=0,alp=0,dig=0,count=0;
+            a=document.getElementById("str1").value;
+            b=document.getElementById("str2").value;
+            document.getElementById("res1").innerHTML="string input is "+a;
+            strq=a.split(" ")
+            for(i=0;i<a.length;i++)
+            {
+                if(a[i]==" ")
+                    ws+=1;
+                else if((a[i]>='a'&&a[i]<='z')||(a[i]>='A'&&a[i]<='Z'))
+                    alp+=1;
+                else if(a[i]>='0'||a[i]<='9')
+                dig+=1;    
+            }
+            for(i=0;i<strq.length;i++)
+            {
+                if(strq[i]==b)
+                    count+=1;
+            }
+            f=a.search(b)
+            document.getElementById("res2").innerHTML="no of alpha,digit,whitespace is "+alp+" "+dig+" "+ws+" no of occ of b and pos is "+count+" "+f;
+            
+        }
+    </script>
+</body>
+</html>

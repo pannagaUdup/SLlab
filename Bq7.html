@@ -1,0 +1,86 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback String Op</title>
+</head>
+<body>
+    <form>
+    <input type="text" id="str1"><br>
+    <input type="button" onclick="func()" value="submit"><br>
+    <span id="res1"></span><br>
+    <span id="res2"></span><br>
+    </form>
+    <script>
+        var len=[];
+        var orgstr=["hi","how","are","you"];
+        const func2 =(arr1,arr2)=>
+        {
+            for(i=0;i<arr2.length;i++)
+            if(arr2[i]>3)
+                neww.push(arr1[i]);
+                document.getElementById("res2").innerHTML=neww;
+        }
+        function func1()
+        {
+            for(i=0;i<orgstr.length;i++)
+                len[i]=orgstr[i].length;
+        }
+        function func()
+        {
+            a=document.getElementById("str1").value;
+            orgstr.unshift(a);
+            func1();
+            document.getElementById("res1").innerHTML="new original string is "+orgstr+" length of each string is "+len;
+            func2(orgstr,len);
+        }
+    </script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question 7</title>
+</head>
+<body>
+    <h1>Question 7</h1>
+    <form>
+        <p>
+            Enter the string 
+        </p>
+        <input type="text" id="str1">
+        <br>
+        <input type="button" onclick="func()" value="submit">
+        <p id="final1"></p>
+        <p id="final2"></p>
+    </form>
+    <script>
+        var mylength=[];
+        var original_string=["hi","wru","iam here"];
+        const func2 =(arr1,arr2)=>
+        {
+            for(i=0;i<arr2.length;i++)
+                if(arr2[i]>3)
+                    neww.push(arr1[i]);
+            document.getElementById("final2").innerHTML=neww;
+        }
+        function func1()
+        {  
+            for(i=0;i<original_string.length;i++)
+                mylength[i]=original_string[i].length;
+        }
+        function func()
+        {
+            a=document.getElementById("str1").value;
+            original_string.unshift(a);
+            func1();
+            document.getElementById("final1").innerHTML=" original string \n "+original_string+"\n length of string "+mylength;
+            func2(original_string,mylength);
+        }
+    </script>
+</body>
+</html>

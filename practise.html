@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="str1"><br>
+        <input type="button" onclick="func()" value="submit"><br>
+        <span id="res1"></span>
+    </form>
+    <script>
+        function func()
+        {
+            a=document.getElementById("str1").value;
+            str=a.split("")
+            for(i=0;i<str.length;i++)
+            {
+                switch(str[i])
+                {
+                    case " ":break;
+                    case 'z':str[i]='a';break;
+                    case 'Z':str[i]='A';break;
+                    default:
+                        str[i]=String.fromCharCode(str[i].charCodeAt()+1)
+                }
+                switch(str[i]){
+                    case 'a':
+                    case 'e':
+                    case 'i':
+                    case 'o':
+                    case 'u':str[i].toUpperCase();
+                }
+            }
+            str2=str.join('');
+            document.getElementById('res1').innerHTML=str2;
+        }
+    </script>
+</body>
+</html>
